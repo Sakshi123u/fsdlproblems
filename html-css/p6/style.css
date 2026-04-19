@@ -1,0 +1,66 @@
+body {
+  font-family: Arial;
+  text-align: center;
+
+  /* Gradient background */
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+  background: #4a90e2;
+  color: white;
+}
+
+/* Gallery container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Images */
+.gallery img {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* Zoom effect */
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Hide class */
+.hide {
+  display: none;
+}

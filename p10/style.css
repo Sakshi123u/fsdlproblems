@@ -1,0 +1,31 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+.faq {
+  width: 50%;
+  margin: auto;
+}
+
+.item {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.question {
+  font-weight: bold;
+}
+
+/* Hidden answer by default */
+.answer {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Show answer */
+.item.active .answer {
+  display: block;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Quiz Application</h2>
+
+    <form id="quizForm">
+
+      <!-- Question 1 -->
+      <p>1. What is HTML?</p>
+      <input type="radio" name="q1" value="a"> Programming Language<br>
+      <input type="radio" name="q1" value="b"> Markup Language<br>
+
+      <!-- Question 2 -->
+      <p>2. What is CSS used for?</p>
+      <input type="radio" name="q2" value="a"> Styling<br>
+      <input type="radio" name="q2" value="b"> Database<br>
+
+      <!-- Question 3 -->
+      <p>3. Which is JavaScript?</p>
+      <input type="radio" name="q3" value="a"> Backend only<br>
+      <input type="radio" name="q3" value="b"> Programming Language<br>
+
+      <br>
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <h3 id="result"></h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Shopping Cart</h1>
+
+  <div class="cart">
+
+    <h2>Product: Laptop</h2>
+    <p>Price: ₹50000</p>
+
+    <div class="controls">
+      <button onclick="decrease()">-</button>
+      <span id="quantity">1</span>
+      <button onclick="increase()">+</button>
+    </div>
+
+    <h3>Total: ₹<span id="total">50000</span></h3>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

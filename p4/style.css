@@ -1,0 +1,44 @@
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* layout */
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+/* form box */
+.form-box {
+  background: rgb(243, 201, 248);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.form-box input,
+.form-box textarea {
+  width: 90%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* profile card */
+.profile-card {
+  background: rgb(186, 186, 248);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}

@@ -1,0 +1,46 @@
+body{
+    font-family: Arial,Sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.pricing-container{
+    text-align:center;
+    background: white;
+    padding:30px;
+    border-radius:12px;
+    width:300px;
+    
+}
+.toggle{
+    display: flex;
+    justify-content:center;
+    margin-bottom:20px;
+    gap:10px;
+}
+
+.toggle button{
+    padding: 8px 16px;
+    border:none;
+    cursor:pointer;
+    border-radius:20px;
+    background: #ddd;    -webkit-border-radius:20px;
+    
+}
+.toggle button.active {
+  background: #4CAF50;
+  color: white;
+}
+.price {
+  font-size: 32px;
+  margin: 20px 0;
+  color: #333;
+}
+.plan {
+  font-size: 18px;
+  margin-bottom: 10px;
+}

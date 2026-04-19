@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Toggle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="pricing-container">
+    <h2>Choose Plan</h2>
+
+    <div class="toggle">
+      <button id="monthlyBtn" class="active" onclick="setPlan('monthly')">Monthly</button>
+      <button id="yearlyBtn" onclick="setPlan('yearly')">Yearly</button>
+    </div>
+
+    <div class="plan" id="planName">Basic Plan</div>
+    <div class="price" id="price">$10</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

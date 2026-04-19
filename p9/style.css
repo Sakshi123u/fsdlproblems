@@ -1,0 +1,23 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 200px;
+  margin: auto;
+}
+
+li {
+  padding: 15px;
+  margin: 8px 0;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  cursor: grab;
+}
+
+li.dragging {
+  opacity: 0.5;
+}

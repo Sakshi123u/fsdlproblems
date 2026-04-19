@@ -1,0 +1,52 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f7fa;
+}
+
+/* Header */
+header {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Sections */
+section {
+  padding: 30px;
+  margin: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+/* Skills */
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  display: inline-block;
+  background: #4a90e2;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Projects */
+.project-card {
+  background: #f4f4f4;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

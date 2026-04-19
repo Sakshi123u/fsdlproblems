@@ -1,0 +1,13 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Control chart size */
+.chart-box {
+  width: 500px;
+  height: 300px;
+  margin: auto;
+}

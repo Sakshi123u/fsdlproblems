@@ -1,0 +1,58 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f4f4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center box */
+.container {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Inputs */
+input {
+  width: 80%;
+  padding: 8px;
+  margin: 5px;
+}
+
+/* Button */
+button {
+  padding: 8px 15px;
+  margin-top: 10px;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+/* Skill section */
+.skill {
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* Bar */
+.bar {
+  width: 100%;
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* Fill */
+.fill {
+  height: 20px;
+  background: green;
+  border-radius: 10px;
+ 
+}

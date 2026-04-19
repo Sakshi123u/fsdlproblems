@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Center input */
+input {
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 250px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;   /* centers table */
+}
+
+/* Cells */
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+/* Header */
+th {
+  background-color: lightgray;
+}
+
+/* Row hover */
+tr:hover {
+  background-color: #f2f2f2;
+}

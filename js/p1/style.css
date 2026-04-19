@@ -1,0 +1,38 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  margin: 0;
+  padding: 20px;
+}
+
+.cart {
+  background: white;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.controls {
+  margin: 15px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+span {
+  margin: 0 10px;
+  font-size: 18px;
+}
