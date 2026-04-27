@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    padding:20px
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    text-align: left;
+}

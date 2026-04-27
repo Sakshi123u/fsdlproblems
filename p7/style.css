@@ -50,10 +50,11 @@ body {
   padding: 10px;
   top: 30px;
   border-radius: 5px;
+  margin:auto;
 }
 
 .dropdown-menu li {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .dropdown-menu li a {
@@ -73,23 +74,3 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #4a90e2;
-    position: absolute;
-    top: 55px;
-    right: 0;
-    width: 200px;
-    padding: 10px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-}

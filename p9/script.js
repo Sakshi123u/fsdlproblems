@@ -1,48 +1,28 @@
 const list = document.getElementById("list");
-const items = document.querySelectorAll("li");
 
-let draggedItem = null;
-
-// When dragging starts
-items.forEach(item => {
-  item.addEventListener("dragstart", function () {
-    draggedItem = this;
-    setTimeout(() => {
-      this.classList.add("dragging");
-    }, 0);
-  });
-
-  item.addEventListener("dragend", function () {
-    this.classList.remove("dragging");
-    draggedItem = null;
-  });
+list.addEventListener("dragstart", e => {
+  e.target.classList.add("dragging");
 });
 
-// Allow drop inside list
-list.addEventListener("dragover", function (e) {
+list.addEventListener("dragend", e => {
+  e.target.classList.remove("dragging");
+});
+
+list.addEventListener("dragover", e => {
   e.preventDefault();
 
-  const afterElement = getDragAfterElement(list, e.clientY);
+  const dragging = document.querySelector(".dragging");
+  const items = list.querySelectorAll("li:not(.dragging)");
 
-  if (afterElement == null) {
-    list.appendChild(draggedItem);
-  } else {
-    list.insertBefore(draggedItem, afterElement);
-  }
-});
+  let next = null;
 
-// Find position
-function getDragAfterElement(container, y) {
-  const draggableElements = [...container.querySelectorAll("li:not(.dragging)")];
+  items.forEach(item => {
+    const middle = item.offsetTop + item.offsetHeight / 2;
 
-  return draggableElements.reduce((closest, child) => {
-    const box = child.getBoundingClientRect();
-    const offset = y - box.top - box.height / 2;
-
-    if (offset < 0 && offset > closest.offset) {
-      return { offset: offset, element: child };
-    } else {
-      return closest;
+    if (e.clientY < middle && !next) {
+      next = item;
     }
-  }, { offset: Number.NEGATIVE_INFINITY }).element;
-}
+  });
+
+  list.insertBefore(dragging, next);
+});

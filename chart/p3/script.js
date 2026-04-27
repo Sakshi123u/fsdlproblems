@@ -9,8 +9,7 @@ new Chart(document.getElementById("lineChart"), {
     datasets: [{
       label: "Temperature (°C)",
       data: [30, 32, 31, 29, 28, 27, 26],
-      fill: false,
-      tension: 0.3
+      
     }]
   },
   options: {

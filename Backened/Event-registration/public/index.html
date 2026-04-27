@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration  System</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .refresh-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Event Registration System</h2>
+
+    <input id="name" placeholder="Name"><br>
+    <input id="email" placeholder="Email"><br>
+    <input id="event" placeholder="Event"><br>
+
+    <button class="add-btn" onclick="addStudent()">Add Student</button>
+
+    <br><br>
+
+    <button class="refresh-btn" onclick="loadStudents()">Load Students</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Event</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="list"></tbody>
+    </table>
+
+</div>
+
+<script>
+async function addStudent() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const event = document.getElementById('event').value;
+
+    await fetch('http://localhost:3000/students', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, event   })
+    });
+
+    alert("Added!");
+    loadStudents();
+}
+
+async function loadStudents() {
+    const res = await fetch('http://localhost:3000/students');
+    const data = await res.json();
+
+    const list = document.getElementById('list');
+    list.innerHTML = '';
+
+    data.forEach(s => {
+        const row = `
+            <tr>
+                <td>${s.name}</td>
+                <td>${s.email}</td>
+                <td>${s.event}</td>
+                <td>
+                    <button class="delete-btn" onclick="deleteStudent('${s._id}')">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        `;
+        list.innerHTML += row;
+    });
+}
+
+async function deleteStudent(id) {
+    await fetch('http://localhost:3000/students/' + id, { method: 'DELETE' });
+    loadStudents();
+}
+</script>
+
+</body>
+</html>
